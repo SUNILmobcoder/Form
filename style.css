@@ -107,3 +107,29 @@ label{
         margin-left: 150px;
     }
   }
+
+
+@media only screen and (max-width: 500px ) {
+    .container {
+        width: 350px;
+    }
+    .container::before {
+        left: -70px;
+    }
+    input, select {
+        display: block;
+        margin-top:10px;
+    }
+    label{
+        display: inline;
+      }
+      span {
+          margin-left: 0;
+      }
+      #persuing {
+        margin-left: 0px;
+    }
+    #upto, #semester, #experience {
+       display: inline;
+    }
+  }
