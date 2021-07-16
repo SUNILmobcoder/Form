@@ -1,0 +1,135 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(147, 162, 228);
+    
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin-top: 10%;
+    background-color: rgb(147, 162, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    min-height: 400px;
+    border: 1px solid #fff;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.container::before {
+    content: "Registration Details";
+    position: relative;
+    top: -10px;
+    left: -300px;
+    padding-left: 5px;
+    padding-right: 5px;
+    size: 20px;
+    color: #fff;
+    font-weight: bold;
+    
+}
+.form-control {
+    padding: 10px;
+    padding-bottom: 30px;
+    color: #fff;
+}
+input,select {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 20px;
+}
+#branch {
+    width: 150px;
+}
+#degrees{
+    width: 100px;
+}
+
+#persuing, #completed {
+    width: 40px;
+}
+
+#upto, #semester, #experience {
+    width: 40px;
+}
+
+span {
+    color: red;
+    display: block;
+    margin-left: 100px;
+}
+
+button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #010101;
+    display: block;
+    font-family: inherit;
+    font-size: 17px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+
+label{
+    display: inline-block;
+    width: 175px;
+    margin-right: 10px;
+    direction: rtl; 
+    
+  }
+.nowidth {
+    width: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 450px;
+    }
+    .container::before {
+        left: -100px;
+    }
+    #persuing {
+        margin-left: 150px;
+    }
+  }
+
+
+@media only screen and (max-width: 500px ) {
+    .container {
+        width: 340px;
+    }
+    .container::before {
+        left: -70px;
+    }
+    input, select {
+        display: block;
+        margin-top:10px;
+    }
+    label{
+        display: inline;
+      }
+      span {
+          margin-left: 0;
+      }
+      #persuing {
+        margin-left: 0px;
+    }
+    #upto, #semester, #experience {
+       display: inline;
+    }
+  }
