@@ -146,7 +146,10 @@ function isUrlValid(url) {
 // url validation
 $("#yourweb").on("change", () => {
     const value = $("#yourweb").val();
-    if(!isUrlValid(value)) {
+    if(value =="" || value == null) {
+        $("#yourwebError").text("Email field cannot be empty");
+        $("#yourwebError").show();
+    } else if(!isUrlValid(value)) {
         $("#yourwebError").text("Please enter valid url");
         $("#yourwebError").show();
     } else {
@@ -159,10 +162,7 @@ $("#yourweb").on("change", () => {
 $('#submit').click((e) => {
     e.preventDefault();
     $('input').each((index, value) => {
-      if(value =="" || value == null) {
-        $("#yourwebError").text("Email field cannot be empty");
-        $("#yourwebError").show();
-    } else if($(value).val().trim() === '' || $(value).val().trim() === null) {
+      if($(value).val().trim() === '' || $(value).val().trim() === null) {
         let tag = 'span'+index;
         $('.'+tag).text('This field cannot be empty');
         $('.'+tag).show();
