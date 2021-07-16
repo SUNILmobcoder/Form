@@ -159,7 +159,10 @@ $("#yourweb").on("change", () => {
 $('#submit').click((e) => {
     e.preventDefault();
     $('input').each((index, value) => {
-      if($(value).val().trim() === '' || $(value).val().trim() === null) {
+      if(value =="" || value == null) {
+        $("#yourwebError").text("Email field cannot be empty");
+        $("#yourwebError").show();
+    } else if($(value).val().trim() === '' || $(value).val().trim() === null) {
         let tag = 'span'+index;
         $('.'+tag).text('This field cannot be empty');
         $('.'+tag).show();
